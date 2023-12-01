@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="quiz.css"> <!-- Pfad zu Ihrer CSS-Datei -->
+</head>
+<body>
+    <h1>Quiz</h1>
+    <form id="quizForm">
+        <div class="quiz-frage">
+            <p>Frage 1: Wann wurden Informercials eingeführt</p>
+            <input type="radio" name="frage1" value="falsch"> 2003<br>
+            <input type="radio" name="frage1" value="falsch"> 1963<br>
+            <input type="radio" name="frage1" value="richtig"> 1983
+        </div>
+        <div class="quiz-frage">
+            <p>Frage 2: Was für Algorithmen werden heutzutage zur Personalisierung von Werbefilmen eingesetzt?</p>
+            <input type="radio" name="frage2" value="falsch"> Laser-gesteuerte<br>
+            <input type="radio" name="frage2" value="richtig"> KI-gesteuerte<br>
+            <input type="radio" name="frage2" value="falsch"> Bewegungs-gesteuerte
+        </div>
+        <div class="quiz-frage">
+            <p>Frage 3: Wann nahmen Werbefilme ihre Anfänge?</p>
+            <input type="radio" name="frage3" value="falsch"> 1923<br>
+            <input type="radio" name="frage3" value="falsch"> 1933<br>
+            <input type="radio" name="frage3" value="richtig"> 1943
+        </div>
+        <input type="button" value="Antworten einreichen" onclick="auswertenQuiz()">
+    </form>
+    <div id="quizErgebnis"></div>
+    <button onclick="window.location.href='index.html'" class="zurueck-button">Zurück zur Startseite</button>
+
+    <!--JavaScript Elemente für Interaktivität-->
+    <script>
+        function auswertenQuiz() {
+            let korrekteAntworten = 0;
+
+            if (document.querySelector('input[name="frage1"]:checked')?.value === "richtig") {
+                korrekteAntworten++;
+            }
+            if (document.querySelector('input[name="frage2"]:checked')?.value === "richtig") {
+                korrekteAntworten++;
+            }
+            if (document.querySelector('input[name="frage3"]:checked')?.value === "richtig") {
+                korrekteAntworten++;
+            }
+
+            document.getElementById('quizErgebnis').textContent = "Sie haben " + korrekteAntworten + " von 3 Fragen richtig beantwortet.";
+        }
+    </script>
+</body>
+</html>

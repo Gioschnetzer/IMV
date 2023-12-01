@@ -1,0 +1,77 @@
+/* Grundlegende Stil-Definitionen */
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: gold;
+    margin-bottom: 50px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Stil für Quiz-Fragen */
+.quiz-frage {
+    background-color:rgba(250, 235, 215, 0.535); /* Leicht transparentes Weiß */
+    color: black;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 600px; /* Max. Breite der Fragen */
+    text-align: left;
+}
+
+/* Stil für Radio-Buttons und ihre Beschriftungen */
+.quiz-frage input[type="radio"] {
+    margin-right: 10px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* Stil für den Einreichen-Button */
+input[type="button"] {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Stil für den Zurück-Button */
+button{
+    display: inline-block;
+    margin-top: 30px;
+    background-color: #ffd700; /* Goldfarbe */
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif; /* Sicherstellen, dass die Schriftart konsistent ist */
+    font-size: 16px; /* Klare Schriftgröße */
+    border: 2px solid black; /* Fügt einen sichtbaren Rand hinzu */
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s; /* Sanfter Übergang für Hover-Effekt */
+}
+
+button:hover {
+    background-color: #b8860b; /* Dunkleres Gold für den Hover-Effekt */
+    color: white; /* Ändert die Textfarbe beim Hover */
+}

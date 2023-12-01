@@ -1,0 +1,118 @@
+/* style.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+h1 {
+    text-align: center; /* Mittige Ausrichtung des Titels */
+    color: white; /* Weißer Text */
+    padding: 20px 0; /* Etwas Abstand oben und unten */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Startausrichtung der Elemente */
+}
+
+/* Linie in der Mitte der Zeitleiste */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px; /* Breite der Linie */
+    background-color: #ff0000; /* Farbe der Linie */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px; /* Zentrierung der Linie */
+}
+
+.container {
+    position: relative;
+    background-color: inherit;
+    width: 40%; /* Breite der Container */
+    margin-bottom: 20px; /* Abstand zwischen den Einträgen */
+}
+
+/* Linke Container */
+.left {
+    margin-left: 10%; /* Abstand vom linken Rand */
+}
+
+/* Rechte Container */
+.right {
+    margin-left: 50%; /* Startet von der Mitte */
+}
+
+/* Inhalt jedes Containers */
+.content {
+    padding: 20px 30px;
+    background-color: transparent;
+    position: relative;
+    border-radius: 6px;
+    color: white;
+}
+
+/* Bilder innerhalb der Inhaltscontainer */
+.content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* Abstand unter dem Bild */
+}
+
+
+
+.quiz-button-end-container {
+    text-align: right; /* Ausrichtung nach rechts */
+    margin-top: 20px; /* Abstand nach dem letzten Meilenstein */
+    width: 100%; /* Container nimmt die volle Breite ein */
+}
+
+.quiz-button {
+
+    right: 0; /* Rechtsbündig im Container */
+    /* ... andere Button-Stile ... */
+    background-color: red; /* Rote Hintergrundfarbe */
+    color: white; /* Weiße Textfarbe */
+    border: none; /* Keinen Rand anzeigen */
+    border-radius: 50%; /* Vollständig runde Ecken für einen kreisförmigen Button */
+    width: 90px; /* Breite des Buttons */
+    height: 90px; /* Höhe des Buttons */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px; /* Schriftgröße */
+    cursor: pointer; /* Cursor-Stil ändern, wenn die Maus über den Button fährt */
+    overflow: hidden; /* Text, der über den Rand hinausgeht, abschneiden */
+    display: inline-block; /* Flexbox verwenden, um den Text zu zentrieren */
+    align-items: center; /* Vertikale Ausrichtung im Flex-Container */
+    justify-content: center; /* Horizontale Ausrichtung im Flex-Container */
+    display: inline-block; /* Behält den Button rechts */
+    text-align: center; /* Horizontale Zentrierung des Textes */
+    line-height: 90px; /* Vertikale Zentrierung des Textes */
+}
+
+
+
+/* Responsive Design Anpassungen */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 80%; /* Breite der Container auf kleinen Bildschirmen */
+        margin-left: 10%; /* Abstand vom linken Rand auf kleinen Bildschirmen */
+    }
+
+    .right {
+        margin-left: 10%; /* Gleicher Abstand für rechte Container auf kleinen Bildschirmen */
+    }
+
+    .timeline::after {
+        left: 60px; /* Anpassung der Position der Linie für kleine Bildschirme */
+    }
+}
